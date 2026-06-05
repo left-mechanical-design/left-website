@@ -394,7 +394,7 @@
 <section id="experience" style="background:var(--white); padding:88px 48px;">
   <div class="section-label">Background &amp; Network</div>
   <h2 class="section-title">経験と<span>ネットワーク</span></h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
+  <div class="exp-grid">
 
     <!-- 経験値タイムライン風 -->
     <div>
@@ -423,7 +423,7 @@
       <p style="font-size:14px; color:var(--text-muted); line-height:1.9; margin-bottom:24px;">
         LeFTは一人の技術者を核としつつ、各分野の専門技術者との技術パートナーネットワークを構築しています。案件規模・内容に応じて最適な体制を組成することで、柔軟かつ迅速な対応を実現します。
       </p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="net-grid">
         <div class="net-card">🔩 機械設計・板金</div>
         <div class="net-card">⚡ 電気工事・配線</div>
         <div class="net-card">🖥️ PLC・制御設計</div>
@@ -439,6 +439,30 @@
 </section>
 
 <style>
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .net-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    .exp-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .net-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    #experience {
+      padding: 56px 20px !important;
+    }
+  }
   .exp-item {
     display:flex; gap:14px; align-items:flex-start;
     padding:16px 0; border-bottom:1px solid var(--border);
